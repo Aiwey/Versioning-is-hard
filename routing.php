@@ -11,6 +11,8 @@ Utils::addRoute('homepage', 'HomepageCtrl');
 Utils::addRoute('trackList', 'trackListCtrl');
 Utils::addRoute('admin', 'adminCtrl',['admin']);
 Utils::addRoute('adminUsers', 'adminCtrl',['admin']);
+Utils::addRoute('adminUsers','adminCtrl',['admin']);
+Utils::addRoute('userDelete','adminCtrl',['admin']);
 
 Utils::addRoute('showAddComment','commentCCtrl',   ['user','admin']);
 Utils::addRoute('showComment','commentCCtrl',   ['user','admin']);

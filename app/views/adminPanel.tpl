@@ -6,7 +6,7 @@
      
     <p> What do you want to tinker with today? </p>
     <ul>
-        <a href ="{rel_url action='adminPanelUsersEdit'}"><li> users </li></a>
+        <a href ="{rel_url action='adminUsers'}"><li> users </li></a>
         <a href ="{rel_url action='adminAlbums'}"><li> albums </li></a>
         <a href ="{rel_url action='adminLabels'}"><li> labels </li></a>
         <a href ="{rel_url action='adminArtists'}"><li> artists</li> </a>

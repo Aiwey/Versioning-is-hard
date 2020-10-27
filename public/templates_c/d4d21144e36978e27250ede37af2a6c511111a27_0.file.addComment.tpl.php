@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-10-24 19:42:08
-  from 'E:\Studia\5sem\ApkWebPHP\htdocs\Serenity\app\views\addComment.tpl' */
+/* Smarty version 3.1.34-dev-7, created on 2020-10-27 18:58:33
+  from 'C:\xampp\htdocs\Serenity\app\views\addComment.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f946770917bd9_21087790',
+  'unifunc' => 'content_5f985fc96c1915_60614451',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'e648581fd23be9edee077beda53c87558f011fb5' => 
+    'd4d21144e36978e27250ede37af2a6c511111a27' => 
     array (
-      0 => 'E:\\Studia\\5sem\\ApkWebPHP\\htdocs\\Serenity\\app\\views\\addComment.tpl',
-      1 => 1603561323,
+      0 => 'C:\\xampp\\htdocs\\Serenity\\app\\views\\addComment.tpl',
+      1 => 1603532522,
       2 => 'file',
     ),
   ),
@@ -20,26 +20,26 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f946770917bd9_21087790 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f985fc96c1915_60614451 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_14087517415f9467709155d3_37565368', 'header');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1075958645f985fc96b4e21_26466277', 'header');
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4343028555f946770915cc9_33023304', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_896802865f985fc96b87e5_37072432', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block 'header'} */
-class Block_14087517415f9467709155d3_37565368 extends Smarty_Internal_Block
+class Block_1075958645f985fc96b4e21_26466277 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'header' => 
   array (
-    0 => 'Block_14087517415f9467709155d3_37565368',
+    0 => 'Block_1075958645f985fc96b4e21_26466277',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -49,12 +49,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'header'} */
 /* {block 'content'} */
-class Block_4343028555f946770915cc9_33023304 extends Smarty_Internal_Block
+class Block_896802865f985fc96b87e5_37072432 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_4343028555f946770915cc9_33023304',
+    0 => 'Block_896802865f985fc96b87e5_37072432',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

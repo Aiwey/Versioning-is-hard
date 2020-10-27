@@ -78,7 +78,7 @@ class commentCCtrl {
     }
     public function generateAddCommentView(){
         $id_album = ParamUtils::getFromPost("idAlbum");
-        App::getSmarty()->assign('comment', $this->form); //dane do formularza dla widoku
+        App::getSmarty()->assign('comment', $this->form->commentContent); //dane do formularza dla widoku
         App::getSmarty()->assign('idAlbum', $id_album);
         App::getSmarty()->display('addComment.tpl');
     }

@@ -19,15 +19,17 @@ use app\forms\UserEditForm;
  * @author Ewa
  */
 class adminCtrl {
+    
+    private $form;
+    public function __construct() {
+        $this->form = new UserEditForm();
+    }
+    
     public function action_admin() {
         App::getSmarty()->display("adminPanel.tpl");
     }
     public function action_adminUsers(){
-        $records = App::getDB()->select("user",
-            ["idUser","UserLogin","UserPassword","UserRole","UserAvatarPath","UserDescription"]
-        );
-         App::getSmarty()->assign("user", $records);
-         App::getSmarty()->display("adminPanelUsers.tpl");
+     $this->generateAdminUsers();
     }
     public function action_adminAlbums() {
         $records = App::getDB()->select("album",
@@ -46,6 +48,13 @@ class adminCtrl {
         );
          App::getSmarty()->assign("album", $records);
          App::getSmarty()->display("adminPanelAlbums.tpl");
+    }
+    public function generateAdminUsers() {
+           $records = App::getDB()->select("user",
+            ["idUser","UserLogin","UserPassword","UserRole","UserAvatarPath","UserDescription"]
+        );
+         App::getSmarty()->assign("user", $records);
+         App::getSmarty()->display("adminPanelUsers.tpl");
     }
      public function action_adminLabels() {
         $records = App::getDB()->select("label",
@@ -76,27 +85,27 @@ class adminCtrl {
          App::getSmarty()->assign("band", $records);
          App::getSmarty()->display("adminPanelBands.tpl");
     }
+    
     public function action_userDelete() {
         // 1. walidacja id osoby do usuniecia
-        if ($this->validateEdit()) {
-
-            try {
+        $this->form->userId = ParamUtils::getFromPost('idperson');
+                  try {
                 // 2. usunięcie rekordu
-                App::getDB()->delete("person", [
-                    "idperson" => $this->form->id
+                App::getDB()->delete("user", [
+                    "idUser" => $this->form->userId
                 ]);
                 Utils::addInfoMessage('Pomyślnie usunięto rekord');
             } catch (\PDOException $e) {
                 Utils::addErrorMessage('Wystąpił błąd podczas usuwania rekordu');
                 if (App::getConf()->debug)
                     Utils::addErrorMessage($e->getMessage());
-            }
-        }
+            }  
+         // 3. Przekierowanie na stronę listy osób
+         Utils::addInfoMessage("User deleted successfully");
+            $this ->generateAdminUsers();
         
-
-        // 3. Przekierowanie na stronę listy osób
-        App::getRouter()->forwardTo('personList');
     }
+    
     public function action_userList() {
         $this->load_data();
         //App::getSmarty()->assign('searchForm', $this->form); // dane formularza (wyszukiwania w tym wypadku)

@@ -23,9 +23,12 @@
                 <td>{$row["UserRole"]}</td>
                 <td>{$row["UserAvatarPath"]}</td>
                 <td>{$row["UserDescription"]}</td>
-                <td> <button class="btn btn-sm btn-outline-secondary" type="button">edit</button>
-                <button class="btn btn-sm btn-outline-secondary" style="background-color: #ffefed;"type="button">delete</button>
-                </td>
+                <td>
+                    <form action="userDelete" method="post" >
+                    <input type="hidden" name="idperson" value ="{$row["idUser"]}">
+                    <input type="submit" class="btn btn-sm btn-outline-secondary" style="background-color: #ffefed;" value="Delete User">
+                    </form>
+                    </td>
    
                 </tr>            
             {/foreach}            
