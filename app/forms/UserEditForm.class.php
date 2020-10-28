@@ -9,5 +9,9 @@ namespace app\forms;
  */
 class UserEditForm {
    public $userId;
+   public $userLogin;
+   public $UserRole;
+   public $UserAvatarPath;
+   public $UserDescription;
 }
 

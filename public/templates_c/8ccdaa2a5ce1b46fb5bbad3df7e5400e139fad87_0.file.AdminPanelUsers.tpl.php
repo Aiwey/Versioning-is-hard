@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-10-27 23:05:43
-  from 'C:\xampp\htdocs\Serenity\app\views\adminPanelUsers.tpl' */
+/* Smarty version 3.1.34-dev-7, created on 2020-10-27 22:44:41
+  from 'C:\xampp\htdocs\Serenity\app\views\AdminPanelUsers.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f9899b7d2d6d9_87981435',
+  'unifunc' => 'content_5f9894c9f08ac8_35716210',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '38e855de28a70cc11331a49baa692399a87587b9' => 
+    '8ccdaa2a5ce1b46fb5bbad3df7e5400e139fad87' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\Serenity\\app\\views\\adminPanelUsers.tpl',
-      1 => 1603836313,
+      0 => 'C:\\xampp\\htdocs\\Serenity\\app\\views\\AdminPanelUsers.tpl',
+      1 => 1603822829,
       2 => 'file',
     ),
   ),
@@ -20,23 +20,23 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f9899b7d2d6d9_87981435 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f9894c9f08ac8_35716210 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8382574625f9899b7ce4625_90609469', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7304092135f9894c9ebd906_34458414', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block 'content'} */
-class Block_8382574625f9899b7ce4625_90609469 extends Smarty_Internal_Block
+class Block_7304092135f9894c9ebd906_34458414 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_8382574625f9899b7ce4625_90609469',
+    0 => 'Block_7304092135f9894c9ebd906_34458414',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -79,8 +79,7 @@ $_smarty_tpl->tpl_vars['row']->do_else = false;
                     <form action="userDelete" method="post" style="margin: 1em;">
                     <input type="hidden" name="idperson" value ="<?php echo $_smarty_tpl->tpl_vars['row']->value["idUser"];?>
 ">
-                    <input type="submit" class="btn btn-sm btn-outline-secondary" style="background-color: #ffefed;" value="Delete User" onsubmit="confirmLink('<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['rel_url'][0], array( array('action'=>"UserDelete"),$_smarty_tpl ) );?>
-','Are you sure about that?')">
+                    <input type="submit" class="btn btn-sm btn-outline-secondary" style="background-color: #ffefed;" value="Delete User">
                     </form>
                     <form action="userEdit" method="post"  style="margin: 1em;">
                     <input type="hidden" name="idperson" value ="<?php echo $_smarty_tpl->tpl_vars['row']->value["idUser"];?>

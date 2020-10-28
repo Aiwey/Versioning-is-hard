@@ -38,7 +38,7 @@ class commentCCtrl {
                     "User_idUser" => $idUzytkownik
                 ]);
             } catch (\PDOException $e){
-            Utils::addErrorMessage('Wystapil nieoczekiwany błąd podczas dodawania do koszyka');
+            Utils::addErrorMessage('An error has occured');
             if (App::getConf()->debug){
                 Utils::addErrorMessage($e->getMessage());}}
                 Utils::addInfoMessage("Succesfuly added comment");
@@ -68,7 +68,7 @@ class commentCCtrl {
             "album.idAlbum" => $id_album
         ]);
         } catch (\PDOException $e){
-            Utils::addErrorMessage('Wystapil nieoczekiwany błąd podczas wyświetlania koszyka');
+            Utils::addErrorMessage('An error has occured');
             if (App::getConf()->debug){
                 Utils::addErrorMessage($e->getMessage());}}
                 

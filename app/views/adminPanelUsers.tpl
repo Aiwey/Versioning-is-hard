@@ -24,9 +24,13 @@
                 <td>{$row["UserAvatarPath"]}</td>
                 <td>{$row["UserDescription"]}</td>
                 <td>
-                    <form action="userDelete" method="post" >
+                    <form action="userDelete" method="post" style="margin: 1em;">
                     <input type="hidden" name="idperson" value ="{$row["idUser"]}">
-                    <input type="submit" class="btn btn-sm btn-outline-secondary" style="background-color: #ffefed;" value="Delete User">
+                    <input type="submit" class="btn btn-sm btn-outline-secondary" style="background-color: #ffefed;" value="Delete User" onsubmit="confirmLink('{rel_url action = "UserDelete"}','Are you sure about that?')">
+                    </form>
+                    <form action="userEdit" method="post"  style="margin: 1em;">
+                    <input type="hidden" name="idperson" value ="{$row["idUser"]}">
+                    <input type="submit" class="btn btn-sm btn-outline-secondary" style="background-color: #ffefed;" value="Edit User">
                     </form>
                     </td>
    
